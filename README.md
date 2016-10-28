@@ -1,4 +1,4 @@
-This is a custom Object-Relation Mapping (ORM) created by me that converts set-based data to object-based data. 
+This project is a custom Object-Relational Mapping (ORM) created by me that converts set-based data to object-based data. 
 
 The user gives the database name from command line and then this program will generate a folder with .java files for each table present on the database with a default constructor, mutators and accessors for each attribute and a toString() method.
 
