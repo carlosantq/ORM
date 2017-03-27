@@ -268,7 +268,7 @@ public class Orm{
          
          for (int i=0; i<attr.length; i++){
             /** Method signature **/
-            pw.write("\n\tpublic " + types[i] + " get" + attr[i] + "(){\n");
+            pw.write("\n\tpublic " + types[i] + " get" + attr[i].substring(0, 1).toUpperCase() + attr[i].substring(1, attr[i].length()) + "(){\n");
             /** Return **/
             pw.write("\t\treturn " + attr[i] + ";\n\t}\n");
          }
@@ -303,9 +303,9 @@ public class Orm{
          
          for (int i=0; i<attr.length; i++){
             /** Method signature **/
-            pw.write("\n\tpublic void set" + attr[i] + " (" + types[i] + " _" + attr[i] + "){\n");
+            pw.write("\n\tpublic void set" + attr[i].substring(0, 1).toUpperCase() + attr[i].substring(1, attr[i].length()) + " (" + types[i] + " " + attr[i] + "){\n");
             /** Assigning values **/
-            pw.write("\t\t" + attr[i] + " = _" + attr[i] + ";\n\t}\n");    
+            pw.write("\t\t" + "this." + attr[i] + " = " + attr[i] + ";\n\t}\n");    
          }
          
          pw.flush();
