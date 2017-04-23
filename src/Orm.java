@@ -167,15 +167,15 @@ public class Orm{
                if (rsmd.getColumnTypeName(i) != "VARCHAR" && rsmd.getColumnTypeName(i) != "DATE"){
                   types[i-1] = rsmd.getColumnTypeName(i).toLowerCase();
                   attr[i-1] = attribute;
-                  pw.write("\n\t" + rsmd.getColumnTypeName(i).toLowerCase() + " " + attribute + ";");
+                  pw.write("\n\tprivate " + rsmd.getColumnTypeName(i).toLowerCase() + " " + attribute + ";");
                }else if (rsmd.getColumnTypeName(i) == "VARCHAR"){
                   types[i-1] = "String";
                   attr[i-1] = attribute;
-                  pw.write("\n\tString " + attribute + ";");
+                  pw.write("\n\tprivate String " + attribute + ";");
                }else if (rsmd.getColumnTypeName(i) == "DATE"){
                   types[i-1] = "Date";
                   attr[i-1] = attribute;
-                  pw.write("\n\tDate " + attribute + ";");
+                  pw.write("\n\tprivate Date " + attribute + ";");
                }
                
                pw.flush();
