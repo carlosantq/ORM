@@ -12,7 +12,7 @@ javac src/Orm.java src/MySQLDatabase.java src/DLException.java -d bin/
 Then go to the bin folder and type:
 
 ```
-> java -cp .:../include/mysql-connector-java-5.1.38-bin.jar Orm name_of_database
+java -cp .:../include/mysql-connector-java-5.1.38-bin.jar Orm name_of_database
 ```
 
 At the bin folder you will notice a new folder with the name of your database containing classes for each table.
